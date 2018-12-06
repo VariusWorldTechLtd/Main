@@ -33,7 +33,8 @@ Identity
 ```
 
 # Phase 2
-Regional Side chains
+Regional side chains
+
 
 # Phase 3
 State channels
