@@ -87,7 +87,7 @@ Demonstrating "Login with VoX" and allowing consumers to play classic casino gam
 ## Varius Online Exchange
 The main problem with new currencies is that there is no liquidity
 
-# VIProtocol
+## VIProtocol
 This is our proprietary blockchain protocol with the main currency as VoX.
 
 VIP is different to other blockchains because it is specific to the needs of the gambling industry.  It is not designed to be used by other industries.
