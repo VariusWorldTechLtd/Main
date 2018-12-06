@@ -1,7 +1,8 @@
 # Phase 1
-Proof of Authority (PoA) network
-Smart Contracts
-Identity
+- Proof of Authority (PoA) network
+- Smart Contracts
+- Identity
+
 ```
 +---------------+     +---------------+
 |               |     |               |
@@ -34,7 +35,7 @@ Identity
 
 # Phase 2
 Regional side chains
-
+Privacy
 
 # Phase 3
 State channels
