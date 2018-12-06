@@ -34,8 +34,8 @@
 ```
 
 # Phase 2
-Regional side chains
-Privacy
+-Regional side chains
+-Privacy
 
 # Phase 3
 State channels
