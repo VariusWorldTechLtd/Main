@@ -1,7 +1,10 @@
+## Abstract 
+
 *We live in an age of openness and honesty.*
 
 Yet the gambling industry is stuck in the past. Stealing money from consumers or, at best, not able to prove their honesty.
 
+## Introduction
 Consumers (synonmyns : Gamblers, Players, Punters, Users, Betters) have lost trust with the institutions they place bets with. Any game that can be fixed, is at risk of being fixed. This becomes even more apparent when games are a blackbox where no one can see the inner workings. 
 
 How can a consumer know if they lost fairly or are being cheated?
