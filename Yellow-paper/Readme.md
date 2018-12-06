@@ -14,7 +14,7 @@ How can a consumer know if they lost fairly or are being cheated?
 In this paper, we are proposing a world where the gambling industry is more open and honest, not through trust, but through technical contract at protocol level.  In essence, transactions between parties where the consumer doesn't need to trust the casino (or other gambling platform). For this we need a blockchain, a wallet that is KYC linked to a consumer, a white-label out-of-the-box crypto-enabled casino, a self-service on-boarding platform for Casinos, and a future-proof high-frequency blockchain protocol specific for the gambling industry which can handle the transaction speed of any casino or sportsbook.  
 
 
-
+![Eliptic](https://248qms3nhmvl15d4ne1i4pxl-wpengine.netdna-ssl.com/wp-content/uploads/2014/10/elliptic_curve_commmons-270x300.png)
 
 
 
