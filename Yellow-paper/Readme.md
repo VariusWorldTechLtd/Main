@@ -13,9 +13,10 @@ In this paper, we are proposing a world where the gambling industry is more open
 
 
 
-# Phase 1
+## Phase 1
 - Proof of Authority (PoA) network
 - Smart Contracts
+- Mobile first web wallet
 - Identity claims
 
 ```
