@@ -81,10 +81,10 @@ Consumers can then play at the casino with their normal casino games in fiat cur
 Upon withdrawal, a market exchange occurs back to the tokens straight into the VoX wallet.  Note: it is up to the casino to enforce AML requirements of the withdraw amounts >= deposit amounts in that deposit method.
 
 
-# Fiat / BTC / VOX Casinos
+## Fiat / BTC / VOX Casinos
 Demonstrating "Login with VoX" and allowing consumers to play classic casino games in fiat currency but with deposit and withdraw as VWT tokens. But in this model, the casino hold the funds and need to be trusted in the traditional way.
 
-# Varius Online Exchange
+## Varius Online Exchange
 The main problem with new currencies is that there is no liquidity
 
 # VIProtocol
