@@ -1,4 +1,4 @@
-The gambling industry is historically corrupt. 
+*The gambling industry is corrupt.*
 
 Consumers (synonmyns : Gamblers, Players, Punters, Users, Betters) have lost trust with the institutions they place bets with. Any game that can be fixed, is at risk of being fixed. This becomes even more apparent when games are a blackbox where no one can see the inner workings. 
 
