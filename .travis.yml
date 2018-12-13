@@ -5,6 +5,7 @@ branches:
  only:
  - master
 before_script:
+ - cd voxwallet
  - npm install -g ionic cordova
 script:
  - ionic cordova build browser - prod
