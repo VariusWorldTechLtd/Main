@@ -9,11 +9,15 @@
   </video>
   <div class="phone-overlay"></div>
 
-  <div class="phone-content">
+  <ion-list class="phone-content">
     <h1>Verify your phone number</h1>
     <ion-item>
-      <ion-input required type="number" placeholder="Phone number" clearInput></ion-input>
+      <ion-input type="tel" placeholder="Phone number"></ion-input>
     </ion-item>
-  </div>
+
+    <ion-button color="secondary" expand="block" (click)="onVerify();">Verify</ion-button>
+  
+  </ion-list>
+  
 
 </ion-content>

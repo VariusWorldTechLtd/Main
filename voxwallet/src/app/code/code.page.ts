@@ -2,11 +2,11 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-phone',
-  templateUrl: './phone.page.html',
-  styleUrls: ['./phone.page.scss'],
+  selector: 'app-code',
+  templateUrl: './code.page.html',
+  styleUrls: ['./code.page.scss'],
 })
-export class PhonePage implements OnInit, AfterViewInit {
+export class CodePage implements OnInit, AfterViewInit {
 
   constructor(private router: Router,
     private activatedRoute: ActivatedRoute) { }
@@ -18,8 +18,10 @@ export class PhonePage implements OnInit, AfterViewInit {
     this.activatedRoute.params.subscribe((params) => { });
   }
 
-  onVerify() {
-    this.router.navigate(['/code']);
+  onKeyUp(value: string) {
+    if (value.length >= 5) {
+      this.router.navigate(['/details']);
+    }
   }
 
 }

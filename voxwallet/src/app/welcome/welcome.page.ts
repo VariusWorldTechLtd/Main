@@ -23,4 +23,8 @@ export class WelcomePage implements OnInit, AfterViewInit {
   onCreate() {
     this.router.navigate(['/phone']);
   }
+
+  onAlready() {
+    this.router.navigate(['/already']);
+  }
 }

@@ -1,4 +1,4 @@
-.welcome-icon {
+.already-icon {
     position: fixed;
     top: 130px;
     left: 0;
@@ -7,21 +7,16 @@
     z-index: 1;
 }
 
-.welcome-title {
-    color: #fff;
-    margin-top: 100px;
-}
-
-#welcome-video {
+.already-video {
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%; 
     min-height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5)
 }
 
-.welcome-overlay {
+.already-overlay {
     position: fixed;
     bottom: 0;
     background: rgba(41.6, 66.7, 89.4, 0.9);
@@ -30,10 +25,9 @@
     min-height: 100%;
 }
 
-.welcome-content {
+.already-content {
     position: fixed;
-    bottom: 0;
-    // background: rgba(0, 0, 0, 0.5);
+    top: 240px;
     color: #fff;
     width: 100%;
     padding: 20px;
