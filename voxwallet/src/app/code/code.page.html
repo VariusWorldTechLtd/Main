@@ -1,0 +1,19 @@
+<ion-content>
+
+  <div class="code-icon">
+    <img src="assets/images/wallet.svg">
+  </div>
+
+  <video autoplay muted loop class="code-video">
+    <source src="assets/videos/welcome.mp4" type="video/mp4">
+  </video>
+  <div class="code-overlay"></div>
+
+  <ion-list class="code-content">
+    <h1>Verification code</h1>
+    <ion-item>
+      <ion-input #code type="tel" placeholder="Code number" (keyup)="onKeyUp(code.value);"></ion-input>
+    </ion-item>  
+  </ion-list>
+  
+</ion-content>

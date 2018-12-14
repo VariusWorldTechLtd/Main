@@ -12,4 +12,8 @@ export class AlreadyPage implements OnInit {
   ngOnInit() {
   }
 
+  onRestore() {
+    
+  }
+
 }

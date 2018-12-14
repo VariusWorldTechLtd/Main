@@ -1,4 +1,4 @@
-.phone-icon {
+.code-icon {
     position: fixed;
     top: 130px;
     left: 0;
@@ -7,7 +7,7 @@
     z-index: 1;
 }
 
-.phone-video {
+.code-video {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -16,7 +16,7 @@
     background: rgba(0, 0, 0, 0.5)
 }
 
-.phone-overlay {
+.code-overlay {
     position: fixed;
     bottom: 0;
     background: rgba(41.6, 66.7, 89.4, 0.9);
@@ -25,7 +25,7 @@
     min-height: 100%;
 }
 
-.phone-content {
+.code-content {
     position: fixed;
     top: 240px;
     background: none;
