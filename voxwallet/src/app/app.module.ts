@@ -29,7 +29,7 @@ import { AppComponent } from './app.component';
     IonicStorageModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireAuthModule,
   ],
   providers: [
     StatusBar,
