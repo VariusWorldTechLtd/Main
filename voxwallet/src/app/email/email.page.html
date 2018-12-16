@@ -13,15 +13,15 @@
     <h1>Enter your details</h1>
  
     <ion-item>
-      <ion-input [(ngModel)]="userDetails.firstName" placeholder="First Name"></ion-input>
+      <ion-input [(ngModel)]="userDetails.firstName" type="text" required placeholder="First Name" clearInput></ion-input>
     </ion-item>
 
     <ion-item>
-        <ion-input [(ngModel)]="userDetails.secondName" placeholder="Second Name"></ion-input>
+        <ion-input [(ngModel)]="userDetails.secondName" type="text" required placeholder="Second Name" clearInput></ion-input>
       </ion-item>
   
     <ion-item>
-      <ion-input [(ngModel)]="userDetails.emailAddress" placeholder="Email address"></ion-input>
+      <ion-input [(ngModel)]="userDetails.emailAddress" type="email" required  placeholder="Email address" clearInput></ion-input>
     </ion-item>
 
     <ion-button color="secondary" expand="block" (click)="saveUser()">Sign Up</ion-button>  
