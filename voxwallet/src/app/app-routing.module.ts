@@ -14,7 +14,9 @@ const routes: Routes = [
   { path: 'seed', loadChildren: './seed/seed.module#SeedPageModule' },
   { path: 'confirm', loadChildren: './confirm/confirm.module#ConfirmPageModule' },
   { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
-  { path: 'code', loadChildren: './code/code.module#CodePageModule' }
+  { path: 'code', loadChildren: './code/code.module#CodePageModule' },
+  { path: 'selfie', loadChildren: './selfie/selfie.module#SelfiePageModule' },
+  { path: 'address', loadChildren: './address/address.module#AddressPageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
