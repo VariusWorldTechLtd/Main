@@ -24,8 +24,10 @@ import { QRScanner  } from '@ionic-native/qr-scanner/ngx';
 
 import { AppComponent } from './app.component';
 
+import { SanitizeHtmlPipe } from './sanitizehtml.pipe';
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SanitizeHtmlPipe],
   entryComponents: [],
   imports: [
     BrowserModule,
