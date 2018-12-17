@@ -12,10 +12,7 @@ script:
  - npm i
  - ionic build --prod --aot
 deploy:
- provider: pages
- skip-cleanup: true
- github-token: $GITHUB_TOKEN
- keep-history: true
- on:
-   branch: master
+ provider: firebase
+ token: 
+   secure: $FIREBASE_TOKEN
  local_dir: voxwallet/www
