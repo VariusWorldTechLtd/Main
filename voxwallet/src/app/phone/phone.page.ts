@@ -65,7 +65,10 @@ export class PhonePage implements OnInit, AfterViewInit {
   ionViewDidEnter() {
     firebase.auth().useDeviceLanguage();
     // firebase.auth().settings.appVerificationDisabledForTesting = true;
-    this.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container');
+    (<any>window).recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+      'size': 'invisible'
+    });
+    this.recaptchaVerifier = (<any>window).recaptchaVerifier;
   }
 
   async onVerify() {
