@@ -59,6 +59,6 @@ export class SeedPage implements OnInit, AfterViewInit {
   }
 
   onConfirm() {
-    this.router.navigate(['/tabs']);
+    this.router.navigate(['/confirm']);
   }
 }
