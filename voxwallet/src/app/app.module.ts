@@ -37,7 +37,7 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     Web3Module,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireAuthModule,
   ],
   providers: [
     StatusBar,
