@@ -1,19 +1,32 @@
-<ion-content>
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="code-icon">
-    <img src="assets/images/wallet.svg">
-  </div>
+<ion-content padding>
 
-  <video autoplay muted loop class="code-video">
-    <source src="assets/videos/welcome.mp4" type="video/mp4">
-  </video>
-  <div class="code-overlay"></div>
+  <ion-list>
 
-  <ion-list class="code-content">
-    <h1>Verification code</h1>
+    <div padding text-center style="margin-top: 56px;">
+      <img src="assets/images/wallet-blue.png" width="244px" height="auto">
+    </div>
+
+    <ion-item lines="none">
+      <h1>Enter Verification Code</h1>
+    </ion-item>
+
     <ion-item>
-      <ion-input #code type="tel" placeholder="Code number" (keyup)="onKeyUp(code.value);"></ion-input>
-    </ion-item>  
+      <ion-input #phoneControl type="text" placeholder="Verification Code" 
+        (keyup)="onKeyUp(phoneControl.value);"
+        minlength="6" maxlength="6"></ion-input>
+    </ion-item>
+
   </ion-list>
-  
+
+  <div id="phoneMovin"></div>
+
 </ion-content>

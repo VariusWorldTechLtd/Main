@@ -1,21 +1,41 @@
-<ion-content>
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="already-icon">
-    <img src="assets/images/wallet.svg">
-  </div>
+<ion-content padding>
 
-  <video autoplay muted loop class="already-video">
-    <source src="assets/videos/welcome.mp4" type="already/mp4">
-  </video>
-  <div class="already-overlay"></div>
+  <!-- <form [formGroup]="phoneForm" (ngSubmit)="onVerify()" novalidate> -->
+    <ion-list>
 
-  <div class="already-content">
-    <h1>Restore account</h1>
-    <ion-item>
-      <ion-input required type="number" placeholder="Wallet seed" clearInput></ion-input>
-      <ion-textarea rows="5" maxLength="5000"></ion-textarea>
-    </ion-item>
-    <ion-button color="secondary" expand="block" (click)="onRestore();">OK</ion-button>
-  </div>
-  
+      <div padding text-center style="margin-top: 56px;">
+        <img src="assets/images/wallet-blue.png" width="244px" height="auto">
+      </div>
+
+      <ion-item lines="none">
+        <h1>Restore account</h1>
+      </ion-item>
+
+      <ion-item>
+        <!-- <ion-input #phoneControl formControlName="phone" type="number" placeholder="Phone number" maxlength="11"
+          [disabled]="disableVerifyButton" [class.invalid]="!phoneForm.controls.phone.valid && phoneForm.controls.phone.dirty"></ion-input> -->
+        <ion-textarea rows="5" maxLength="5000" placeholder="Seed words"></ion-textarea>
+      </ion-item>
+
+      <!-- <ion-item *ngIf="!phoneForm.controls.phone.valid  && phoneForm.controls.phone.dirty" lines="none">
+        <p ion-text color="lightgray">Please enter a valid phone number.</p>
+      </ion-item> -->
+
+      <div padding text-center>
+        <!-- [disabled]="!phoneForm.valid || disableVerifyButton" type="submit" -->
+        <ion-button color="secondary" expand="block" (click)="onRestore();">Restore</ion-button>
+      </div>
+
+    </ion-list>
+  <!-- </form> -->
+
 </ion-content>

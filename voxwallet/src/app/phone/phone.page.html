@@ -1,23 +1,42 @@
-<ion-content>
+<ion-header translucent no-border>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button color="secondary"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="phone-icon">
-    <img src="assets/images/wallet.svg">
-  </div>
+<ion-content padding>
 
-  <video autoplay muted loop class="phone-video">
-    <source src="assets/videos/welcome.mp4" type="video/mp4">
-  </video>
-  <div class="phone-overlay"></div>
+  <form [formGroup]="phoneForm" (ngSubmit)="onVerify()" novalidate>
+    <ion-list>
 
-  <ion-list class="phone-content">
-    <h1>Verify your phone number</h1>
-    <ion-item>
-      <ion-input type="tel" placeholder="Phone number"></ion-input>
-    </ion-item>
+      <div padding text-center style="margin-top: 56px;">
+        <img src="assets/images/wallet-blue.png" width="244px" height="auto">
+      </div>
 
-    <ion-button color="secondary" expand="block" (click)="onVerify();">Verify</ion-button>
-  
-  </ion-list>
-  
+      <ion-item lines="none">
+        <h1>Verify your phone number</h1>
+      </ion-item>
+
+      <ion-item>
+        <ion-input #phoneControl formControlName="phone" type="number" placeholder="Phone number" maxlength="11"
+          [disabled]="disableVerifyButton" [class.invalid]="!phoneForm.controls.phone.valid && phoneForm.controls.phone.dirty"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="!phoneForm.controls.phone.valid  && phoneForm.controls.phone.dirty" lines="none">
+        <p ion-text color="lightgray">Please enter a valid phone number.</p>
+      </ion-item>
+
+      <div padding text-center>
+        <div id="recaptcha-container"></div><br>
+        <ion-button color="secondary" expand="block" [disabled]="!phoneForm.valid || disableVerifyButton" type="submit">Verify</ion-button>
+      </div>
+
+    </ion-list>
+  </form>
+
+  <div id="treeMovin"></div>
 
 </ion-content>

@@ -1,37 +1,8 @@
-.code-icon {
-    position: fixed;
-    top: 130px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-}
-
-.code-video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    background: rgba(0, 0, 0, 0.5)
-}
-
-.code-overlay {
-    position: fixed;
-    bottom: 0;
-    background: rgba(41.6, 66.7, 89.4, 0.9);
-    color: #f1f1f1;
-    min-width: 100%; 
-    min-height: 100%;
-}
-
-.code-content {
-    position: fixed;
-    top: 240px;
-    background: none;
-    color: #fff;
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    z-index: 2;
+#phoneMovin {
+    position: relative;
+    top: 0px;
+    left: 55%;
+    width: 340px; 
+    height: 340px;
+    transform: translateX(-50%);
 }

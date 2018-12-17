@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: "AIzaSyDj8LHY_pbRsxxTYoLaP9pRIIKa4jKwnzA",
-    authDomain: "vox-wallet-a2ce2.firebaseapp.com",
-    databaseURL: "https://vox-wallet-a2ce2.firebaseio.com",
-    projectId: "vox-wallet-a2ce2",
-    storageBucket: "vox-wallet-a2ce2.appspot.com",
-    messagingSenderId: "697715834204"
+    apiKey: 'AIzaSyAwj70wypt7H1DjU3c4M4Ysq1j1Eicg4Zk',
+    authDomain: 'vox-wallet.firebaseapp.com',
+    databaseURL: 'https://vox-wallet.firebaseio.com',
+    projectId: 'vox-wallet',
+    storageBucket: 'vox-wallet.appspot.com',
+    messagingSenderId: '1039807212766'
   }
 };
+

@@ -18,6 +18,19 @@
     font-style: normal;
 }
 
+ion-card, .card-md, .card-ios {
+    box-shadow: none !important;
+    // border: 1px solid #d8d8d8;
+}
+
+pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
 .title-icon {
     position: relative;
     width: 100%;
@@ -25,4 +38,5 @@
     bottom: 0;
     text-align:center;
 }
+
 

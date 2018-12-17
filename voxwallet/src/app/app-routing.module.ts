@@ -5,16 +5,15 @@ import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule', canActivate: [AuthGuard] },
+  { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule', canActivate: [AuthGuard] },
   { path: 'welcome', loadChildren: './welcome/welcome.module#WelcomePageModule' },
   { path: 'terms', loadChildren: './terms/terms.module#TermsPageModule' },
   { path: 'phone', loadChildren: './phone/phone.module#PhonePageModule' },
   { path: 'already', loadChildren: './already/already.module#AlreadyPageModule' },
-  { path: 'code', loadChildren: './code/code.module#CodePageModule' },
-  { path: 'pin', loadChildren: './pin/pin.module#PinPageModule' },
-  { path: 'repin', loadChildren: './repin/repin.module#RepinPageModule' },
   { path: 'seed', loadChildren: './seed/seed.module#SeedPageModule' },
   { path: 'confirm', loadChildren: './confirm/confirm.module#ConfirmPageModule' },
-  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' }
+  { path: 'details', loadChildren: './details/details.module#DetailsPageModule' },
+  { path: 'code', loadChildren: './code/code.module#CodePageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
