@@ -1,18 +1,21 @@
 language: node_js
 node_js:
- - "8.9.4"
+- 8.9.4
 branches:
- only:
- - master
+  only:
+  - master
 before_script:
- - cd voxwallet
- - npm install -g ionic cordova
- - npm install -g @angular/cli
+- cd voxwallet
+- npm install -g ionic cordova
+- npm install -g @angular/cli
 script:
- - npm i
- - ionic build --prod --aot
+- npm i
+- ionic build --prod --aot
 deploy:
- provider: firebase
- token: 
-   secure: $FIREBASE_TOKEN
- local_dir: voxwallet/www
+  provider: firebase
+  token:
+    secure: "M95iwFi1ZatGw/OGcBh4hWlGy+5oykSWXaUxxkg7PfqbvfpbNjTqimdD++aUbK5BTJ4QKyQahjeplFpxhATdhgfs+bAnuwv5oVEJYWs9/TDSPtvpapCRJV6YK+tyYhf89ZLNw+DMjwzCsXmwpdk79TJFTJIvd7sSwXeeK1YD1R1cDwHSBAy9/3tEcPIODLv7g48rannla7MWDVBK/jdUN/FZOGvoNW5X8Yld0Y1ZWqWXr6kA0EV4O+84nz1RSectw3QrbK3GuVIsoVlKEdjYGvFUOYs4YDK7nWKoamHi3qZvBCEDP+spWfPavgwLPDExP77sq9WQH6LtZ2qf7NLfhgiG8P3Yi06Tk/JPu7baAU7vwmaM0GZRTFOOvksyAFdYrTEeUejrE8mHr/Ivb6x8028HmAsd+9ItinvM0QYGYp/l6AtpcvcVqhHLVY5wILQrd77I0dX9L9JdxV8Ysqhpnsgi8vqBwiYzDDza5cU0yfEN+pPKOzRq6MwkMcgUUhx1U0n9M8wWJFzQZiU8gAEdx9mpTVXyhlhHZ9D8lvCuYu3h44U4W9Otjik3yIRb++lIRuIOUojJDvskJGMws6hlqRq/fGTmB+sM1ig5M69xBLcxsySYmQk6gkJY6r0oL7p2z8zIWfu+9rHuXigCWr2qgxIjAnDryJFF8r23FPTFng0="
+  local_dir: voxwallet/www
+env:
+  global:
+    secure: M95iwFi1ZatGw/OGcBh4hWlGy+5oykSWXaUxxkg7PfqbvfpbNjTqimdD++aUbK5BTJ4QKyQahjeplFpxhATdhgfs+bAnuwv5oVEJYWs9/TDSPtvpapCRJV6YK+tyYhf89ZLNw+DMjwzCsXmwpdk79TJFTJIvd7sSwXeeK1YD1R1cDwHSBAy9/3tEcPIODLv7g48rannla7MWDVBK/jdUN/FZOGvoNW5X8Yld0Y1ZWqWXr6kA0EV4O+84nz1RSectw3QrbK3GuVIsoVlKEdjYGvFUOYs4YDK7nWKoamHi3qZvBCEDP+spWfPavgwLPDExP77sq9WQH6LtZ2qf7NLfhgiG8P3Yi06Tk/JPu7baAU7vwmaM0GZRTFOOvksyAFdYrTEeUejrE8mHr/Ivb6x8028HmAsd+9ItinvM0QYGYp/l6AtpcvcVqhHLVY5wILQrd77I0dX9L9JdxV8Ysqhpnsgi8vqBwiYzDDza5cU0yfEN+pPKOzRq6MwkMcgUUhx1U0n9M8wWJFzQZiU8gAEdx9mpTVXyhlhHZ9D8lvCuYu3h44U4W9Otjik3yIRb++lIRuIOUojJDvskJGMws6hlqRq/fGTmB+sM1ig5M69xBLcxsySYmQk6gkJY6r0oL7p2z8zIWfu+9rHuXigCWr2qgxIjAnDryJFF8r23FPTFng0=
