@@ -7,10 +7,10 @@ branches:
 before_script:
 - cd voxwallet
 - npm install -g @angular/cli
-- npm run lint
 - npm install -g ionic cordova
 script:
 - npm i
+- npm run lint
 - ionic build --prod --aot
 deploy:
   provider: firebase
