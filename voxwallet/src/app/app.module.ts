@@ -26,6 +26,8 @@ import { AppComponent } from './app.component';
 
 import { SanitizeHtmlPipe } from './sanitizehtml.pipe';
 
+// import { SeedService } from './services/seed.service';
+
 @NgModule({
   declarations: [AppComponent, SanitizeHtmlPipe],
   entryComponents: [],
@@ -47,6 +49,7 @@ import { SanitizeHtmlPipe } from './sanitizehtml.pipe';
     Camera,
     QRScanner,
     Web3Service,
+    // SeedService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

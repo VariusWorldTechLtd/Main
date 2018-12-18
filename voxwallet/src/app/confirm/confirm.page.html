@@ -9,7 +9,7 @@
 
 <ion-content padding>
 
-  <form [formGroup]="confirmForm" (ngSubmit)="onVerify()" novalidate>
+  <form [formGroup]="confirmForm" (ngSubmit)="onConfirm()" novalidate>
     <ion-list>
 
       <div padding text-center style="margin-top: 56px;">
@@ -52,7 +52,7 @@
       </ion-item>
 
       <div padding text-center>
-        <ion-button color="secondary" expand="block" (click)="onRestore();" [disabled]="!confirmForm.valid || isSending"
+        <ion-button color="secondary" expand="block" [disabled]="!confirmForm.valid || isSending"
           type="submit">Confirm</ion-button>
       </div>
 
