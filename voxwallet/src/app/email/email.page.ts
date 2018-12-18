@@ -9,9 +9,9 @@ import { Storage } from '@ionic/storage';
 export class EmailPage implements OnInit {
 
   userDetails = {
-    firstName : '',
-    secondName : '',
-    emailAddress : ''
+    firstName: '',
+    secondName: '',
+    emailAddress: ''
   };
 
   ngOnInit() {
