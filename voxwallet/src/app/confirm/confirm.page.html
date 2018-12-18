@@ -34,7 +34,7 @@
       </ion-list-header>
 
       <ion-item>
-        <ion-input #passwordControl formControlName="password" type="text" placeholder="New password (min. 8 chars)"
+        <ion-input #passwordControl formControlName="password" type="password" placeholder="New password (min. 8 chars)"
           minlength="8" [disabled]="isSending" [class.invalid]="!confirmForm.controls.password.valid && confirmForm.controls.password.dirty"></ion-input>
       </ion-item>
 
@@ -43,7 +43,7 @@
       </ion-item>
 
       <ion-item>
-        <ion-input #confirmPasswordControl formControlName="confirmPassword" type="text" placeholder="Confirm password"
+        <ion-input #confirmPasswordControl formControlName="confirmPassword" type="password" placeholder="Confirm password"
           minlength="8" [disabled]="isSending" [class.invalid]="!confirmForm.controls.confirmPassword.valid && confirmForm.controls.confirmPassword.dirty"></ion-input>
       </ion-item>
 
