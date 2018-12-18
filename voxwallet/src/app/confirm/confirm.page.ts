@@ -33,9 +33,7 @@ export class ConfirmPage implements OnInit, AfterViewInit {
     });
   }
 
-  ngOnInit() {
-    console.log('seed', this.seedService.seed);
-  }
+  ngOnInit() {}
 
   ngAfterViewInit() {
     this.activatedRoute.params.subscribe((params) => { });

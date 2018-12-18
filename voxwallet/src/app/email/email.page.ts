@@ -8,24 +8,24 @@ import { Storage } from '@ionic/storage';
 })
 export class EmailPage implements OnInit {
 
+  userDetails = {
+    firstName: '',
+    secondName: '',
+    emailAddress: ''
+  };
+
   ngOnInit() {
   }
 
-  userDetails = {
-    firstName:'',
-    secondName:'',
-    emailAddress:''     
-  };
-
-
   constructor(private storage: Storage) { }
 
-  saveUser(){  
-    var obj = this.userDetails;
-    this.storage.set('Userdetails', obj).then(() => {
+  saveUser() {
+    const userToSave = this.userDetails;
+    this.storage.set('Userdetails', userToSave).then(() => {
         this.storage.get('Userdetails').then(() => {
-            console.log(obj);
-            console.log('Your Name is ' + obj.firstName + obj.secondName + ' and email address is ' + obj.emailAddress);
+            console.log(userToSave);
+            console.log('Your Name is ' + userToSave.firstName + userToSave.secondName +
+              ' and email address is ' + userToSave.emailAddress);
         });
     });
   }
