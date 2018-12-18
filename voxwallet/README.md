@@ -20,7 +20,7 @@ This is the cross-platform entry point to the VoX eco system.
 ## CI
 The latest green build is deployed to the above enviroinment continously.
 
-<a href="http://vox-wallet.firebaseapp.com">Staged deployment of wallet app.</a>. 
+Try it: <a href="http://vox-wallet.firebaseapp.com">Staged deployment of VoX Wallet </a>
 
 ## Development
 
