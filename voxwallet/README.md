@@ -20,7 +20,9 @@ Bounty opportunities
 Login with VoX
 
 ## CI
-<a href="http://vox-wallet.firebaseapp.com">Staged deployment of wallet app available here</a>. The latest green build is deployed to that enviroinment continously.
+<a href="http://vox-wallet.firebaseapp.com">Staged deployment of wallet app available here</a>. 
+
+The latest green build is deployed to the above enviroinment continously.
 
 
 ## Development
