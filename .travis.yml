@@ -6,6 +6,7 @@ branches:
   - master
 before_script:
 - cd voxwallet
+- npm run lint
 - npm install -g ionic cordova
 - npm install -g @angular/cli
 script:
