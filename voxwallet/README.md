@@ -5,17 +5,17 @@ Desktop browser: <a href="https://travis-ci.org/VariusWorldTechLtd/Main"><img sr
 This is the cross-platform entry point to the VoX eco system.
 
 ## Current Features
-Phone verification
-Account Creation
-Seed words for backup
+- Phone verification
+- Account Creation
+- Seed words for backup
 
 
 ## Upcoming Features
-Account Verify 
-KYC
-Restore accound from seed words
-Bounty opportunities
-Login with VoX
+- Account Verify 
+- KYC
+- Restore accound from seed words
+- Bounty opportunities
+- Login with VoX
 
 ## CI
 The latest green build is deployed to the above enviroinment continously.
@@ -38,7 +38,10 @@ ionic serve
 ## Building the code into a static site
 
 The following command builds the code into a /www/ folder
-`ionic build --prod --aot`
+
+```
+ionic build --prod --aot
+```
 
 
 
