@@ -18,17 +18,27 @@ Bounty opportunities
 Login with VoX
 
 ## CI
-<a href="http://vox-wallet.firebaseapp.com">Staged deployment of wallet app available here</a>. 
-
 The latest green build is deployed to the above enviroinment continously.
 
+<a href="http://vox-wallet.firebaseapp.com">Staged deployment of wallet app.</a>. 
 
 ## Development
 
 install npm 6.1.0 or higher
-- npm install -g @angular/cli
-- npm install -g ionic cordova
-- npm i
-- ionic build --prod --aot
+
+```
+npm install -g @angular/cli
+npm install -g ionic cordova
+npm i
+npm run lint
+npm run test
+ionic serve
+```
+
+## Building the code into a static site
+
+The following command builds the code into a /www/ folder
+`ionic build --prod --aot`
+
 
 
