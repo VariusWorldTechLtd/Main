@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('new App', () => {
+describe('VoX Wallet', () => {
   let page: AppPage;
 
   beforeEach(() => {
