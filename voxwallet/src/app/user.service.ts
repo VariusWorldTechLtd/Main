@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Storage } from '@ionic/storage';
 
 export class User {
   public title: string;
@@ -33,18 +34,19 @@ export class User {
 })
 export class UserService {
 
-  currentUser: User = <User>JSON.parse(localStorage.getItem('currentUser'));
-
-  constructor() { }
+  constructor(private storage: Storage) { }
 
   loadUserData() {
-    this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    console.log('loadUserData - currentUser', this.currentUser);
+    this.storage.get('currentUser').then((val) => {
+      console.log('loadUserData - currentUser', val);
+    });
   }
 
-  isAuthenticated() {
-    console.log('isAuthenticated', this.currentUser !== null);
-    return this.currentUser !== null;
+  isAuthenticated(): any {
+    this.storage.get('currentUser').then((val) => {
+    console.log('isAuthenticated', val !== null);
+    return val !== null;
+    });
   }
 
   saveUser(userModel: User) {
@@ -53,15 +55,16 @@ export class UserService {
       const tmpModel = userModel;
       console.log('saveUser - tmpModel before', JSON.stringify(tmpModel));
 
-      const userData = JSON.parse(localStorage.getItem('currentUser'));
-      if (userData) {
-        for (const key of Object.keys(userData)) {
-          if (!tmpModel[key]) {
-            tmpModel[key] = userData[key];
+      this.storage.get('currentUser').then ((val) => {
+        if (val) {
+          for (const key of Object.keys(val)) {
+            if (!tmpModel[key]) {
+              tmpModel[key] = val[key];
+            }
           }
         }
-      }
-      localStorage.setItem('currentUser', JSON.stringify(tmpModel));
+      });
+      this.storage.set('currentUser', tmpModel);
       console.log('saveUser - tmpModel after', JSON.stringify(tmpModel));
     }
   }

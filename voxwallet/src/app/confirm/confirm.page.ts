@@ -33,7 +33,9 @@ export class ConfirmPage implements OnInit, AfterViewInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.seedService.seed);
+  }
 
   ngAfterViewInit() {
     this.activatedRoute.params.subscribe((params) => { });
@@ -75,9 +77,7 @@ export class ConfirmPage implements OnInit, AfterViewInit {
     });
 
     this.userService.saveUser(tmpModel);
-    // this.router.navigate(['/selfie']);
-
-    console.log('confirmed');
+    this.router.navigate(['/selfie']);
   }
 
 }
