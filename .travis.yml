@@ -11,7 +11,7 @@ before_script:
 script:
 - npm i
 - npm run lint
-- ionic build --prod --aot
+- ionic cordova build browser --prod --aot
 deploy:
   provider: firebase
   token:
