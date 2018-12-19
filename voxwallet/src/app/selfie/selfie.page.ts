@@ -49,14 +49,14 @@ export class SelfiePage implements OnInit, AfterViewInit {
 
   async onSelfie() {
     try {
-      // const cameraOptions: CameraOptions = {
-      //   quality: 95,
-      //   destinationType: this.camera.DestinationType.FILE_URI,
-      //   encodingType: this.camera.EncodingType.JPEG,
-      //   mediaType: this.camera.MediaType.PICTURE
-      // }
-      // const imageData = await this.camera.getPicture(cameraOptions);
-      // let base64Image = 'data:image/jpeg;base64,' + imageData;
+      const cameraOptions: CameraOptions = {
+        quality: 95,
+        destinationType: this.camera.DestinationType.FILE_URI,
+        encodingType: this.camera.EncodingType.JPEG,
+        mediaType: this.camera.MediaType.PICTURE
+      }
+      const imageData = await this.camera.getPicture(cameraOptions);
+      let base64Image = 'data:image/jpeg;base64,' + imageData;
       this.router.navigate(['/address']);
     } catch (error) {
       console.error(`openCamera - error: ${error}`);
