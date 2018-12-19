@@ -6,7 +6,9 @@ import * as bodymovin from 'bodymovin';
 import * as bip39 from 'bip39';
 import * as hdkey from 'ethereumjs-wallet/hdkey';
 
-import * as _ from 'lodash';
+declare var require;
+
+const chunk =  require('lodash/chunk');
 
 import { SeedService } from '../services/seed.service';
 
@@ -56,7 +58,7 @@ export class SeedPage implements OnInit, AfterViewInit {
   createAccount() {
     const mnemonic = bip39.generateMnemonic();
     this.seedService.seed = mnemonic;
-    this.seedWords = _.chunk(mnemonic.split(' '), 3);
+    this.seedWords = chunk(mnemonic.split(' '), 3);
     // const seed = bip39.mnemonicToSeed(mnemonic);
     // const root = hdkey.fromMasterSeed(seed);
     // const masterPrivateKey = root.privateKey.toString('hex');
