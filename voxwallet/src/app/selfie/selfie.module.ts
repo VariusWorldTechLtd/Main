@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ConfirmPage } from './confirm.page';
+import { SelfiePage } from './selfie.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ConfirmPage
+    component: SelfiePage
   }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    ReactiveFormsModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ConfirmPage]
+  declarations: [SelfiePage]
 })
-export class ConfirmPageModule {}
+export class SelfiePageModule {}

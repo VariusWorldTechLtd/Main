@@ -1,24 +1,26 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { TermsPage } from './terms.page';
+import { AddressPage } from './address.page';
 
-describe('TermsPage', () => {
-  let component: TermsPage;
-  let fixture: ComponentFixture<TermsPage>;
+
+describe('AddressPage', () => {
+  let component: AddressPage;
+  let fixture: ComponentFixture<AddressPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ TermsPage ],
+      imports: [RouterTestingModule, FormsModule, ReactiveFormsModule],
+      declarations: [ AddressPage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TermsPage);
+    fixture = TestBed.createComponent(AddressPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -2,23 +2,23 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { TermsPage } from './terms.page';
+import { SelfiePage } from './selfie.page';
 
-describe('TermsPage', () => {
-  let component: TermsPage;
-  let fixture: ComponentFixture<TermsPage>;
+describe('SelfiePage', () => {
+  let component: SelfiePage;
+  let fixture: ComponentFixture<SelfiePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ TermsPage ],
+      declarations: [ SelfiePage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TermsPage);
+    fixture = TestBed.createComponent(SelfiePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

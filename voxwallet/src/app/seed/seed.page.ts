@@ -8,10 +8,12 @@ import * as hdkey from 'ethereumjs-wallet/hdkey';
 
 import chunk from 'lodash/chunk';
 
+import { SeedService } from '../services/seed.service';
+
 @Component({
   selector: 'app-seed',
   templateUrl: './seed.page.html',
-  styleUrls: ['./seed.page.scss'],
+  styleUrls: ['./seed.page.scss']
 })
 export class SeedPage implements OnInit, AfterViewInit {
 
@@ -22,7 +24,8 @@ export class SeedPage implements OnInit, AfterViewInit {
   seedWords = [];
 
   constructor(private router: Router,
-    private activatedRoute: ActivatedRoute) {
+    private activatedRoute: ActivatedRoute,
+    private seedService: SeedService) {
 
   }
 
@@ -52,6 +55,7 @@ export class SeedPage implements OnInit, AfterViewInit {
 
   createAccount() {
     const mnemonic = bip39.generateMnemonic();
+    this.seedService.seed = mnemonic;
     this.seedWords = chunk(mnemonic.split(' '), 3);
     // const seed = bip39.mnemonicToSeed(mnemonic);
     // const root = hdkey.fromMasterSeed(seed);
@@ -59,6 +63,6 @@ export class SeedPage implements OnInit, AfterViewInit {
   }
 
   onConfirm() {
-    this.router.navigate(['/tabs']);
+    this.router.navigate(['/confirm']);
   }
 }
