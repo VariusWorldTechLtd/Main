@@ -36,16 +36,16 @@ export class UserService {
   constructor(private storage: Storage) { }
 
   loadUserData() {
-    this.storage.get('currentUser').then((val) =>{
+    this.storage.get('currentUser').then((val) => {
       console.log('loadUserData - currentUser', val);
-    })
+    });
   }
 
-  isAuthenticated() : any {
+  isAuthenticated(): any {
     this.storage.get('currentUser').then((val) => {
-    console.log('isAuthenticated', val!== null);
+    console.log('isAuthenticated', val !== null);
     return val !== null;
-    })
+    });
   }
 
   saveUser(userModel: User) {
@@ -62,9 +62,8 @@ export class UserService {
             }
           }
         }
-      })
-    
-      this.storage.set('currentUser', tmpModel)
+      });
+      this.storage.set('currentUser', tmpModel);
       console.log('saveUser - tmpModel after', JSON.stringify(tmpModel));
     }
   }
