@@ -24,12 +24,36 @@ import { QRScanner  } from '@ionic-native/qr-scanner/ngx';
 
 import { AppComponent } from './app.component';
 
+import { WelcomePage } from './welcome/welcome.page';
+import { PhonePage } from './phone/phone.page';
+import { TermsPage } from './terms/terms.page';
+import { AlreadyPage } from './already/already.page';
+import { SeedPage } from './seed/seed.page';
+import { ConfirmPage } from './confirm/confirm.page';
+import { DetailsPage } from './details/details.page';
+import { CodePage } from './code/code.page';
+import { SelfiePage } from './selfie/selfie.page';
+import { AddressPage } from './address/address.page';
+
 import { SanitizeHtmlPipe } from './sanitizehtml.pipe';
 
 // import { SeedService } from './services/seed.service';
 
 @NgModule({
-  declarations: [AppComponent, SanitizeHtmlPipe],
+  declarations: [
+    AppComponent, 
+    SanitizeHtmlPipe,
+    WelcomePage,
+    PhonePage,
+    TermsPage,
+    AlreadyPage,
+    SeedPage,
+    ConfirmPage,
+    DetailsPage,
+    CodePage,
+    SelfiePage,
+    AddressPage
+  ],
   entryComponents: [],
   imports: [
     BrowserModule,
@@ -41,7 +65,7 @@ import { SanitizeHtmlPipe } from './sanitizehtml.pipe';
     AppRoutingModule,
     Web3Module,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
+    AngularFireAuthModule
   ],
   providers: [
     StatusBar,

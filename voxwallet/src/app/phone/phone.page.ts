@@ -45,21 +45,21 @@ export class PhonePage implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.activatedRoute.params.subscribe((params) => { });
 
-    if (document.getElementById('treeMovin')) {
-      const treeData = {
-        wrapper: document.getElementById('treeMovin'),
-        animType: 'html',
-        loop: true,
-        prerender: true,
-        autoplay: true,
-        path: 'assets/animations/tree.json',
-        rendererSettings: {
-          progressiveLoad: false,
-        }
-      };
-      this.treeAnim = bodymovin.loadAnimation(treeData);
-      this.treeAnim.setSpeed(0.75);
-    }
+    // if (document.getElementById('treeMovin')) {
+    //   const treeData = {
+    //     wrapper: document.getElementById('treeMovin'),
+    //     animType: 'html',
+    //     loop: true,
+    //     prerender: true,
+    //     autoplay: true,
+    //     path: 'assets/animations/tree.json',
+    //     rendererSettings: {
+    //       progressiveLoad: false,
+    //     }
+    //   };
+    //   this.treeAnim = bodymovin.loadAnimation(treeData);
+    //   this.treeAnim.setSpeed(0.75);
+    // }
   }
 
   ionViewDidEnter() {
