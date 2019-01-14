@@ -14,7 +14,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to VoX-Wallet'
+      msg: 'Welcome to Your Vue.js App'
     };
   }
 };
