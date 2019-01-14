@@ -1,3 +1,5 @@
+before script:
+  - cd Vox-Wallet/web
 build site:
   image: node:6
   stage: build
@@ -7,7 +9,7 @@ build site:
   artifacts:
     expire_in: 1 week
     paths:
-      - Vox-Wallet/web/dist
+      - dist
 
 unit test:
   image: node:6
