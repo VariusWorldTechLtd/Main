@@ -1,4 +1,4 @@
-before script:
+before_script:
   - cd Vox-Wallet/web
 build site:
   image: node:6
