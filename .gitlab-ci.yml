@@ -1,8 +1,5 @@
-before_script:
-  paths: 
-    - Vox-Wallet/web
-
 build site:
+  paths: Vox-Wallet/web
   image: node:6
   stage: build
   script:
