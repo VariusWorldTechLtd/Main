@@ -1,5 +1,7 @@
 before_script:
-  - cd /Vox-Wallet/web
+  paths: 
+    - Vox-Wallet/web
+
 build site:
   image: node:6
   stage: build
