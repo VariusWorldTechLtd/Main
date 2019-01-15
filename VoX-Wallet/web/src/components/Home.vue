@@ -3,8 +3,7 @@
     <h1>{{ msg }}</h1>
     <!-- <h2>Essential Links</h2> -->
     <ul>
-      <li><router-link to="/login">Login</router-link></li>
-      <li><router-link to="/register">Register</router-link></li>
+      <li><router-link to="/Download">Download App</router-link></li>
     </ul>
   </div>
 </template>
