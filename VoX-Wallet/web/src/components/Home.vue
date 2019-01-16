@@ -3,18 +3,37 @@
     <h1>{{ msg }}</h1>
     <!-- <h2>Essential Links</h2> -->
     <ul>
-      <li><router-link to="/Download">Download App</router-link></li>
+     
+      <li><button v-if="!showQr" id="login" @click="generateQrCode">Login</button></li>
     </ul>
+      
+    <div>
+      <qrcode-vue v-if="showQr" id="qr-code" :value="value" :size="size" level="L"></qrcode-vue>
+    </div>
   </div>
 </template>
 
 <script>
+import QrcodeVue from 'qrcode.vue';
+
 export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      value: '0xcd234a471b72ba2f1ccf0a70fcaba648a5eecd8d',
+      showQr: false,
+      size: 500
     };
+  },
+  components: {
+    QrcodeVue
+  },
+  methods: {
+    generateQrCode: function () {
+      console.log('test', this.showQr);
+      this.showQr = !this.showQr;
+    }
   }
 };
 </script>
