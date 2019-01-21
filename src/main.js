@@ -1,39 +1,45 @@
-import Vue from 'vue';
-import BootstrapVue from 'bootstrap-vue';
-import axios from 'axios';
+import Vue from 'vue'
+import './pollyfills'
+import VueRouter from 'vue-router'
+import VueNotify from 'vue-notifyjs'
+import VeeValidate from 'vee-validate'
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
+import App from './App.vue'
 
-import App from './App';
-import router from './router';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-vue/dist/bootstrap-vue.css';
+// Plugins
+import GlobalComponents from './gloablComponents'
+import GlobalDirectives from './globalDirectives'
+import SideBar from './components/UIComponents/SidebarPlugin'
 
-import store from './store';
+// router setup
+import routes from './routes/routes'
 
-axios.defaults.baseURL = 'http://localhost:3000/api';
-// axios.defaults.headers.common['Authorization'] = 'fasfdsa'
-axios.defaults.headers.get['Accepts'] = 'application/json';
+// library imports
 
-const reqInterceptor = axios.interceptors.request.use(config => {
-  console.log('Request Interceptor', config);
-  return config;
-});
+import './assets/sass/paper-dashboard.scss'
+import './assets/sass/element_variables.scss'
+import './assets/sass/demo.scss'
 
-const resInterceptor = axios.interceptors.response.use(res => {
-  console.log('Response Interceptor', res);
-  return res;
-});
+import sidebarLinks from './sidebarLinks'
+// plugin setup
+Vue.use(VueRouter)
+Vue.use(GlobalDirectives)
+Vue.use(GlobalComponents)
+Vue.use(VueNotify)
+Vue.use(SideBar, {sidebarLinks: sidebarLinks})
+Vue.use(VeeValidate)
+locale.use(lang)
 
-axios.interceptors.request.eject(reqInterceptor);
-axios.interceptors.response.eject(resInterceptor);
-
-Vue.use(BootstrapVue);
-Vue.config.productionTip = false;
+// configure router
+const router = new VueRouter({
+  routes, // short for routes: routes
+  linkActiveClass: 'active'
+})
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  store,
-  router,
-  template: '<App/>',
-  components: { App }
-});
+  render: h => h(App),
+  router
+})
